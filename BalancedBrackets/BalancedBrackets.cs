@@ -37,7 +37,7 @@ namespace BalancedBracketsNS
                     brackets--;
                 }
             }
-            return (brackets % 2) == 0; //updated this to look for even numbers of brackets
+            return brackets == 0;
         }
     }
 }
