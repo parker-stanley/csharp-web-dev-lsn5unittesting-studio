@@ -50,36 +50,42 @@ namespace BalancedBracketsTests
         }
 
         //7. unbalanced - test for single bracket at the beginning
+        [TestMethod]
         public void SingleBeginningBracket()
         {
             Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("[LaunchCode"));
         }
 
         //8. unbalanced - test for single bracket at the end
+        [TestMethod]
         public void SingleEndingBracket()
         {
-            Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("LaunchCode"));
+            Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("LaunchCode]"));
         }
 
         //9. unbalanced - test for incorrectly paired brackets
-        public void IncorrectBracketPari()
+        [TestMethod]
+        public void IncorrectBracketPair()
         {
             Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("]LaunchCode["));
         }
 
         //10. unbalanced - test for only two brackets of the same direction
+        [TestMethod]
         public void DuplicateBracketsWithNoMatches()
         {
             Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("[LaunchCode["));
         }
 
         //11. unbalanced - test for when only one bracket is passed and nothing else
+        [TestMethod]
         public void OnlyOneBracket()
         {
             Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("["));
         }
 
         //12. unbalanced - test for when there are multiple prolems
+        [TestMethod]
         public void HotMess()
         {
             Assert.IsFalse(BalancedBrackets.HasBalancedBrackets("][Laun]chCode[["));
